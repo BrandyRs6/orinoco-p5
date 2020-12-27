@@ -1,0 +1,109 @@
+*{
+    list-style-type: none;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.card{
+    width: 500px;
+}
+.image-card{
+    width: 500px;
+    height: 250px;
+}
+
+
+
+.nav-item a{
+    color:black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-item a:hover{
+    color:white;
+    background-image: linear-gradient(#d17f45, #a468be);
+}
+
+.produit-index{
+    display: flex;
+    text-align: center;
+}
+.produit-articles{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+  
+}
+.div-totale{
+    text-align: center;
+}
+.detail-panier-articles{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+#panier{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.panier-items{
+    background-color:white;
+    height: 450px;
+}
+.liste-panier{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.container-panier
+{
+    width: 50%;
+    height: 600px;
+    border-radius: 2%;
+}
+.message-panier{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+.container-sous-total{
+    float: right;
+}
+.sous-total-message{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+.container-price-details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+.image-du-panier{
+    width: 30px;
+    height: 25px;
+}
+.quantity-input{
+    width: 45px;
+}
+
+
+.produit-buttons{
+ padding-left: 15px;
+}
