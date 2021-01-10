@@ -52,7 +52,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
     const ajoutPanier = document.getElementById('ajoutPanier');
     ajoutPanier.addEventListener("click", function (e){
       e.preventDefault();
-      const product = new Product(data._id, data.name, data.imageUrl, data.price, data.description, 1);
+      const product = new Product(data._id, data.name,data.imageUrl, data.price, data.description, 1);
       console.log(product)
       if(localStorage.getItem("products") == null){
         const productsArray = [product];
