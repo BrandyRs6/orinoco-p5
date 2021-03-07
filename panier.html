@@ -22,7 +22,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">Orinoco</a>
       </li>
-      
+
       <li class="nav-item">
         <a class="nav-link active" href="panier.html">Panier</a>
       </li>
@@ -32,7 +32,7 @@
 
 
 <main id="panier">
- 
+
   <div class="container-panier container-responsive">
     <div class="message-panier"><h2>Votre Panier</h2></div>
     <div class="panier-items">
@@ -48,17 +48,19 @@
           </tr>
         </thead>
 
-        <tbody id="tbody-items">
-        </tbody>
-        
+        <tbody id="tbody-items"></tbody>
+
       </table>
+
+      <div id="containerBTN"></div>
+     
 <!--
-      <div class="container">
+      <div class="container-fluid">
         <form class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" id="prenom"  required>
+                    <input type="text" class="form-control id-valid" id="prenom"  required>
                     <div class="valid-feedback">Ok !</div>
                     <div class="invalid-feedback">Valeur incorrecte</div>
                 </div>
@@ -76,32 +78,36 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-4 mb-3">
                     <label for="ville">Ville</label>
                     <input type="text" class="form-control" id="ville" placeholder="Ville" required>
                     <div class="valid-feedback">Ok !</div>
                     <div class="invalid-feedback">Valeur incorrecte</div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-4 mb-3">
                     <label for="pays">Pays</label>
                     <input type="text" class="form-control" id="pays" placeholder="Pays" required>
                     <div class="valid-feedback">Ok !</div>
                     <div class="invalid-feedback">Valeur incorrecte</div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-4 mb-3">
                     <label for="cp">Code postal</label>
                     <input type="number" class="form-control" id="cp" placeholder="Code postal" required>
                     <div class="valid-feedback">Ok !</div>
                     <div class="invalid-feedback">Valeur incorrecte</div>
                 </div>
             </div>
-            
-            <button class="btn btn-primary" type="submit">Envoyer</button>
+
+            <button class="btn btn-dark btn-submit" type="submit">Envoyer</button>
         </form>
     </div>
+
+  -->
       </div>
-  </div>
--->
+   
+      
+
+  
 
 
 
@@ -109,14 +115,14 @@
 
 </main>
 
-  
-    
-    
+
+
+
 
     <script type="text/javascript" src="js/panier.js"></script>
 
 
 
-    
+
 </body>
 </html>
