@@ -2,9 +2,9 @@ const items = localStorage.getItem("products");
 const produits = JSON.parse(items);
 const itemsPanier = document.getElementById('tbody-items');
 
-
-
+var prixTotalDesProduits= 0;
 for(produit of produits){
+  
     const tr = document.createElement('tr')
     const produitName = document.createElement('td')
     var textName = document.createTextNode(`${produit.name}`)
@@ -66,12 +66,28 @@ for(produit of produits){
     amount.appendChild(textAmount);
 
     tr.appendChild(amount)
-    itemsPanier.appendChild(tr)
+    itemsPanier.appendChild(tr)    
 
-
-    
-    
+   prixTotalDesProduits += prixTotal;
+   
    }
+
+   // ici je crée le container avec le prix totale
+   const cardContainerPrice = document.querySelector('.card');
+
+   const cardContainerBody = document.createElement('div');
+   cardContainerBody.setAttribute('class', 'card-body text-center containerAvecPrixTotal');
+   var cardTextBody = document.createTextNode('Le prix Totale est de : ' + `${prixTotalDesProduits}`)
+   cardContainerBody.appendChild(cardTextBody)
+
+   cardContainerPrice.appendChild(cardContainerBody)
+// fin du container avec le prix totale
+
+   
+  
+
+   
+   
    
 
    // ici je crée le containerBTN
@@ -128,11 +144,9 @@ for(produit of produits){
    trAfficherProduits.appendChild(tdAfficherProduitQuantity)
 
 }
-
-
 });
 
-/*
+
    const plusOursons = document.querySelector('.plusOursons')
    const quantityContainer = document.querySelector('.quantity-container')
    const moinsOursons = document.querySelector('.moinsOursons')
@@ -141,7 +155,7 @@ for(produit of produits){
    plusOursons.addEventListener('click' ,function(){
     
     quantityContainer.value = parseInt(quantityContainer.value) + 1
-
+    produit.quantity += 1;
    })    
 
     // incrementation moins
@@ -151,6 +165,5 @@ for(produit of produits){
          console.log('Votre produit est supprimé')
       }
     })    
-   */
-
-
+   
+  
