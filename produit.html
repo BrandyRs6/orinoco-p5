@@ -9,39 +9,40 @@
 </head>
 <body>
   <nav>
-    <ul class="nav nav-pills nav-fill">
+    <ul class="nav nav-pills nav-fill ">
       <li class="nav-item">
         <img src="logo.PNG" alt="orinoco logo" height="45px">
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Orinoco</a>
+        <a class="nav-link text-dark" href="index.html">Orinoco</a>
       </li>
-
+      
       <li class="nav-item">
-        <a class="nav-link" href="panier.html">Panier</a>
+        <a class="nav-link text-dark" href="panier.html">Panier</a>
       </li>
-
     </ul>
-
+    </nav>
     </nav>
 
 
     <main id="produits-articles" class="produit-articles">
 
-       <div class="card mb-3">
+       <div class="card-group bg-dark p-4">
         <div class="row no-gutters">
          <!--ContainerIMG--> <div class="col-md-4" id="containerImg"></div>
           <div class="col-md-8">
             <div class="card-body" id="containerBody">
               <!--Ici container avec le select color et du price-->
             </div>
+
+            <div class="produit-buttons">
+              <a href=":javascript" id="ajoutPanier" class="btn btn-light" >Ajouter au panier</a>
+              <a href="index.html" class="btn btn-light"> <b> Continuer vos achats</b></a>
+              <a href="panier.html" class="btn btn-light"> <b> Voir le panier</b></a>
+             </div>
           </div>
 
-          <div class="produit-buttons">
-          <a href=":javascript" id="ajoutPanier" class="btn btn-dark" >Ajouter au panier</a>
-          <a href="index.html" class="btn btn-dark"> <b> Continuer vos achats</b></a>
-          <a href="panier.html" class="btn btn-dark"> <b> Voir le panier</b></a>
-         </div>
+         
          
         </div>
       </div>

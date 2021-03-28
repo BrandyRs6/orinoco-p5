@@ -15,25 +15,26 @@
 <body>
 
   <nav>
-    <ul class="nav nav-pills nav-fill">
+    <ul class="nav nav-pills nav-fill bg-dark">
       <li class="nav-item">
         <img src="logo.PNG" alt="orinoco logo" height="45px">
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Orinoco</a>
+        <a class="nav-link text-white" href="index.html">Orinoco</a>
       </li>
-
+      
       <li class="nav-item">
-        <a class="nav-link active" href="panier.html">Panier</a>
+        <a class="nav-link text-white" href="panier.html">Panier</a>
       </li>
     </ul>
     </nav>
+
     <!--Fin nav -->
 
 
 <main id="panier">
 
-  <div class="container-panier container-responsive">
+  <div class="container-panier container-responsive col-md-6">
     <div class="message-panier"><h2>Votre Panier</h2></div>
     <div class="panier-items">
       <table class="table">
@@ -52,53 +53,41 @@
 
       </table>
 
-     
 
 
       <div id="containerBTN"></div>
-      <div class="card float-right"></div>
+      <div class="card float-right col-md-6"></div>
      
 
       <div class="container-fluid">
         <form class="needs-validation" novalidate>
             <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control id-valid" id="prenom"  required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
+                <div class="col-md-6 mb-1">
+                    <label for="firstName">Prénom</label>
+                    <input type="text" class="form-control" pattern="[A-Za-z]"value="" id="prenom" placeholder="Jean" title="Utilisez seulement des lettres "required>
+                    
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="nom">Nom de famille</label>
-                    <input type="text" class="form-control" id="nom"  required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
+                <div class="col-md-6 mb-1">
+                    <label for="lastName">Nom de famille</label>
+                    <input type="text" class="form-control" pattern="[A-Za-z]" value="" id="nom" placeholder="Dujardin" required>
+                
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="adress">Adresse</label>
-                    <input type="text" class="form-control" id="adresse"  required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
+                <div class="col-md-12 mb-3">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" pattern="^\d+\s[A-z]+\s[A-z]+" value="" id="adresse" placeholder="114 rue Anatole"  required>
+                   
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-1">
                     <label for="ville">Ville</label>
-                    <input type="text" class="form-control" id="ville" placeholder="Ville" required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
+                    <input type="text" class="form-control" pattern="[A-Za-z]" id="ville" value placeholder="Lyon" required>
+                   
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="pays">Pays</label>
-                    <input type="text" class="form-control" id="pays" placeholder="Pays" required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="cp">Code postal</label>
-                    <input type="number" class="form-control" id="cp" placeholder="Code postal" required>
-                    <div class="valid-feedback">Ok !</div>
-                    <div class="invalid-feedback">Valeur incorrecte</div>
+                <div class="col-md-6 mb-1">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" value="" placeholder="monemail@gmail.com" required>
+                    
                 </div>
             </div>
 

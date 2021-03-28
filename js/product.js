@@ -18,7 +18,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
 
     // ici création du name
     const dataName = document.createElement('h5');
-    dataName.setAttribute('class', 'card-title')
+    dataName.setAttribute('class', 'card-title text-white')
     var textDataName = document.createTextNode(`${data.name}`)
     dataName.appendChild(textDataName)
 
@@ -27,7 +27,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
 
     // ici creation description
     const dataDescription = document.createElement('p');
-    dataDescription.setAttribute('class', 'card-text')
+    dataDescription.setAttribute('class', 'card-text text-white')
     var textDataDescription = document.createTextNode(`${data.description}`);
     dataDescription.appendChild(textDataDescription);
 
@@ -38,14 +38,14 @@ fetch("http://localhost:3000/api/teddies/" + id)
     // creation du div options
 
     const divOptions = document.createElement('div')
-    divOptions.setAttribute('class', 'options')
+    divOptions.setAttribute('class', 'options text-white')
     containerBody.appendChild(divOptions);
 
   // creation du label
 
     const labelForColors = document.createElement('label');
     labelForColors.setAttribute('for', 'color')
-    var labelText = document.createTextNode('Couleurs')
+    var labelText = document.createTextNode('Couleurs :  ')
     labelForColors.appendChild(labelText);
     divOptions.appendChild(labelForColors);
 
@@ -54,6 +54,24 @@ fetch("http://localhost:3000/api/teddies/" + id)
   selectContainer.setAttribute('name', 'color')
   selectContainer.setAttribute('id', 'qcolor')
   divOptions.appendChild(selectContainer)
+
+  // creation du label quantité
+  const labelForQuantity = document.createElement('label');
+  labelForQuantity.setAttribute('for', 'quantity');
+  var labelForQuantityText = document.createTextNode('Quantity : ')
+  labelForQuantity.appendChild(labelForQuantityText);
+  divOptions.appendChild(labelForQuantity)
+
+  // creation du input quantité
+
+  const quantityinput = document.createElement('input')
+  quantityinput.setAttribute('name', 'quantity')
+  quantityinput.setAttribute('value', '1')
+  quantityinput.setAttribute('id', 'quantityUser')
+  quantityinput.setAttribute('type', 'number')
+  quantityinput.setAttribute('min', '0')
+  quantityinput.setAttribute('max', '10')
+  divOptions.appendChild(quantityinput)
 
  
 // creation du p = price
@@ -85,7 +103,7 @@ divOptions.appendChild(paragPrice)
       e.preventDefault();
       console.log(document.getElementById('qcolor').value)
       // je crée mon produit
-      const product = new Product(data._id, data.name, data.imageUrl, data.price, data.description,1, document.getElementById('qcolor').value);
+      const product = new Product(data._id, data.name, data.imageUrl, data.price, data.description,document.getElementById('quantityUser').value, document.getElementById('qcolor').value);
       console.log(product)
      
 

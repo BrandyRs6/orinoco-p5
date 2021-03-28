@@ -143,19 +143,17 @@
   display: none;
 }
 
-#quanitySectionPanier{
-    display: flex;
-}
-#quanitySectionPanier p{
-    font-size: 16px;
-}
-#quanitySectionPanier input{
-    height: 25px;
-    width: 25px;
-}
+
 .btn-submit{
     width: 100%;
 }
 #afficherToutsProduits{
     width: 100%;
+}
+
+.noborder{
+    border-top: none;
+}
+#quantity-container{
+    width: 25px;
 }
