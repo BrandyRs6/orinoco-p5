@@ -1,9 +1,9 @@
-const url = new URL(window.location);
-const params = new URLSearchParams(url);
+const url = new URL(window.location); // creation de l'url
+const params = new URLSearchParams(url); // parametre de l'url
 const produits_articles = document.getElementById('produits-articles')
-const id = url.searchParams.get("id");
+const id = url.searchParams.get("id"); // c'est pour recuperer l'id
 
-fetch("http://localhost:3000/api/teddies/" + id)
+fetch("http://localhost:3000/api/teddies/" + id) // requette fetch de l'api + l'id de l'article pour afficher le produit
 .then(function(response){
     return response.json();
 }).then(function(data){
@@ -89,7 +89,7 @@ divOptions.appendChild(paragPrice)
 
 
   
-    for(color  of data.colors){
+    for(color  of data.colors){ // boucle pour recuperer toutes les couleurs et les afficher dans la page produit 
       const containerOption = document.createElement('option');
       containerOption.setAttribute('id', `${color}`)
       containerOption.setAttribute('value', `${color}`)
@@ -102,29 +102,32 @@ divOptions.appendChild(paragPrice)
     ajoutPanier.addEventListener("click", function (e){
       e.preventDefault();
       console.log(document.getElementById('qcolor').value)
-      // je crée mon produit
+      // je crée mon produit 
       const product = new Product(data._id, data.name, data.imageUrl, data.price, data.description,document.getElementById('quantityUser').value, document.getElementById('qcolor').value);
       console.log(product)
      
 
       //je vérifie si mon local storage est vide
       if(localStorage.getItem("products") == null){
-        const productsArray = [product];
-
-  
+        const productsArray = [product]; // si oui je crée un tableau  pour mettre mon product
+        // ici je récupere tous les données sauf qu'ils sont en bloc
+        // ducoup je dois les stringify pour pouvoir les utilisé 
+        
         // ensuite ce tableau je le stringify c'est à dire je le mets sous forme string
-        const productString = JSON.stringify(productsArray);
+        const productString = JSON.stringify(productsArray); // methode stringify
         // ensuite je crée une clé qui a comme valeur product en string
-        localStorage.setItem("products", productString);
+        localStorage.setItem("products", productString); // ici j'enregistre dans le localstorage 
+                                                        // clé products qui prends la cons productString
 
       } else {
-         
+        // si il existe déjà alors je parse produit
+   
         const products = JSON.parse(localStorage.getItem("products"));
-        
-       
+
+        // si le produit existe alors je le filtre pour voir l'id et changer la couleur
         const foundProducts = products.filter(item => item.id === product.id).filter(item => item.color === product.color);
       
-      
+      // ici je vérifie si le produit n'existe déjà 
         if(foundProducts.length > 0) {
           
         // fait moi une incrementation de quantity de 1 pour le product.id
@@ -136,14 +139,14 @@ divOptions.appendChild(paragPrice)
        
     
         } else {
-            // sinon affiche moi un autre produit
+            // sinon push le produit
           products.push(product);
           
         }
 
-        // ici je rends products en string
+        // ici je rends products en string afin de re mettre les nouveaux données
         const productString = JSON.stringify(products);
-        // puis je ré écrit le nouveau product
+        
         localStorage.setItem("products", productString);
       }
     });

@@ -128,15 +128,15 @@
 @keyframes shake {
   25%{
     font-size: 10px;
-    transform:rotate(1turn);
+    transform:scale(10px);
   }
   50%{
     font-size: 12px;
-    transform:rotate(-1turn);
+    transform:scale(50px);
   }
   100%{
     font-size: 18px;
-    transform:rotate(1turn);
+    transform:scale(10px);
   }
 }
 .none{
@@ -155,5 +155,22 @@
     border-top: none;
 }
 #quantity-container{
-    width: 25px;
+    width: 23px;
+}
+.form-control:valid{
+    border: 1px solid rgb(125, 236, 125);
+    color: green;
+}
+.form-control:invalid{
+    
+    border: 1px solid red;
+}
+.disabled:disabled{
+    background-color: #ddd;
+}
+.date-and-month{
+    width: 100px;
+}
+#creationAccountBtn{
+    width: 100%;
 }
